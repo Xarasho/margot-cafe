@@ -2,6 +2,7 @@ import * as React from "react";
 import {
   ActivityIndicator,
   Pressable,
+  StyleSheet,
   Text,
   TextStyle,
   ViewStyle,
@@ -70,7 +71,7 @@ export default function Button({
     <Pressable
       onPress={onPress}
       disabled={disabled || loading}
-      style={[
+      style={StyleSheet.flatten([
         getVariantStyles(),
         {
           height: sizeStyles[size].height,
@@ -80,10 +81,10 @@ export default function Button({
           justifyContent: "center",
           alignItems: "center",
           borderRadius: 12,
-          opacity: disabled || loading ? 0.3 : 1,
+          opacity: disabled || loading ? 0.5 : 1,
         },
         style,
-      ]}
+      ])}
     >
       <Text
         style={[
