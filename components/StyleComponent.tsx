@@ -1,34 +1,30 @@
 import React from "react";
-import { Image, StyleSheet, View } from "react-native";
-import Button from "./Button";
+import { StyleSheet, View } from "react-native";
+// import Button from "./Button";
 
 export default function StyleComponent() {
   return (
     <>
-      <Image
+      {/* <Image
         source={{
-          uri: "https://scontent.fbjx1-1.fna.fbcdn.net/v/t51.82787-15/670294177_17873783259592749_8160706903267723771_n.webp?stp=dst-jpg_tt6&_nc_cat=100&ccb=1-7&_nc_sid=13d280&_nc_ohc=iTh9n2Uv1VEQ7kNvwEBkvHM&_nc_oc=Adp5HOxIryEwOJD20McU4d--C1DNtyQXPgbFanB-8DHDxUvupO5xuicexvXc71EbwgkopHwXp8z5PKlvusy64-cj&_nc_zt=23&_nc_ht=scontent.fbjx1-1.fna&_nc_gid=eyHgNXaSulZ07EORMe0OZw&_nc_ss=7b2a8&oh=00_Af0daB6e4VYjhhY3nNkpsDqvPG_C5EKmTRAB1W-GRRbPqA&oe=69F8E206",
-          // uri: "https://scontent.fbjx1-1.fna.fbcdn.net/v/t51.82787-15/682382846_17876098605592749_2267663382049886666_n.webp?stp=dst-jpg_tt6&_nc_cat=105&ccb=1-7&_nc_sid=13d280&_nc_ohc=r606ZwdiF6UQ7kNvwEil-Vl&_nc_oc=AdqdWvjk94vyYpbnYc4DNL2GxQtIgv3i9fzOpN-TgVGFHqOV2EIjx8LosqX9Mpn0wqdia7Y63chAo_Sj8c-nWBAD&_nc_zt=23&_nc_ht=scontent.fbjx1-1.fna&_nc_gid=-hg1EEBs3f59stQvPZw4aw&_nc_ss=7b2a8&oh=00_Af2fBOr8dM0poBUbygDuJmIVZSRMXJR-g_4jUbZKJ6sicw&oe=69F8CBBB", //www.facebook.com/photo/?fbid=122131223913113431&set=a.122127428073113431",
+          uri: "https://instagram.fbjx1-1.fna.fbcdn.net/v/t51.82787-15/670294177_17873783259592749_8160706903267723771_n.webp?_nc_cat=100&ig_cache_key=Mzg3NTQ0MDc2ODkyODgxNzM3OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=vsyx0mKsOLEQ7kNvwHK46nb&_nc_oc=AdqXkaqIS4OR3NQ2tG9t_Rgax02Q12Up_ZLC4NhgI9pp8gKAaV03gjgcyabPeU_hht21LOyRlvYJX3573xPlfTeS&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fbjx1-1.fna&_nc_gid=Xp5wciqsbVQr0cIsPEQeDw&_nc_ss=7a22e&oh=00_Af5N7qZk5sFVAuSxnYGga8QD05Vuy-s8x6iueekCO4gmRA&oe=6A002246",
         }}
         style={StyleSheet.absoluteFillObject}
-      />
+      /> */}
       <View
         // style={StyleSheet.compose(styles.centerItems, styles.backgroundOverlay)}
         style={StyleSheet.flatten([
           styles.centerItems,
-          styles.backgroundOverlay,
-          { justifyContent: "center", gap: 20 },
+          // styles.backgroundOverlay,
+          // { justifyContent: "center", gap: 20 },
         ])}
       >
-        <Button variant="sunset" size="lg">
-          Haz Click
-        </Button>
-        <Button disabled size="lg">
-          Haz Click
-        </Button>
-        <Button loading variant="danger" size="lg">
-          Haz Click
-        </Button>
+        {/* <Button>Haz Click</Button>
+        <Button disabled>Haz Click</Button>
+        <Button variant="sunset">Haz Click</Button> */}
+
+        <View style={styles.box} />
+        <View style={styles.box} />
         <View style={styles.box} />
       </View>
     </>
@@ -43,18 +39,22 @@ const styles = StyleSheet.create({
   //   alignItems: "center",
   // },
   box: {
-    width: 100,
+    width: "90%",
     height: 100,
-    backgroundColor: "white",
+    // backgroundColor: "lightblue",
     borderRadius: 16,
+    // borderBottomWidth: StyleSheet.hairlineWidth,
+    // borderWidth: StyleSheet.hairlineWidth,
+    boxShadow: " 0px 4px 6px rgba(0, 0, 0, 0.5)",
   },
   centerItems: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    gap: 16,
   },
   backgroundOverlay: {
-    backgroundColor: "#00000080",
+    backgroundColor: "#00000090",
     justifyContent: "flex-end",
   },
 });
