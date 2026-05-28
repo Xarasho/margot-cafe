@@ -12,14 +12,23 @@ export const zincColors = {
   700: "#3f3f46",
   800: "#27272a",
   900: "#18181b",
-  950: "#18181b",
+  950: "#09090b",
 };
 
-export const appleBlue = "#007AFF";
-export const appleRed = "#FF3B30";
+// export const appleBlue = "#007AFF";
+// export const appleRed = "#FF3B30";
+// export const appleBlue = "#DC3535";
+export const apple = "#FF3B30";
+export const sunset = "#D17842";
+export const dark = "#0C0F14";
+export const ghost = "#252A32";
+export const gray = "#52555A";
+export const light = "#AEAEAE";
+export const white = "#FFFFFF";
 
 export const borderColor = "#A1A1AA80";
 export const appleGreen = "#34C759";
+
 export const Colors = {
   light: {
     text: "#11181C",

@@ -1,9 +1,10 @@
+import { apple, ghost, sunset, zincColors } from "@/colors";
+import Text from "@/components/ui/Text";
 import * as React from "react";
 import {
   ActivityIndicator,
   Pressable,
   StyleSheet,
-  Text,
   TextStyle,
   ViewStyle,
 } from "react-native";
@@ -30,7 +31,7 @@ export default function Button({
   size = "md",
   variant,
   style,
-  textStyle,
+  textStyle = {},
 }: ButtonProps) {
   const sizeStyles: Record<
     ButtonSize,
@@ -44,26 +45,31 @@ export default function Button({
   function getTextColor(): string {
     switch (variant) {
       case "sunset":
-        return "#fff";
+        // return "#fff";
+        return zincColors[50];
       case "danger":
-        return "black";
+        // return "black";
+        return zincColors[50];
       default:
-        return "#fff";
+        return zincColors[50];
     }
   }
 
   function getVariantStyles(): ViewStyle {
     switch (variant) {
       case "sunset":
-        return { backgroundColor: "#D17842" };
+        // return { backgroundColor: "#D17842" };
+        return { backgroundColor: sunset };
       case "danger":
         return {
-          backgroundColor: "#fff",
+          // backgroundColor: "#fff",
+          backgroundColor: apple,
           borderWidth: 1,
           borderColor: "black",
         };
       default:
-        return { backgroundColor: "#252A32" };
+        // return { backgroundColor: ghost, borderWidth: 5, borderColor: sunset };
+        return { backgroundColor: ghost };
     }
   }
 
@@ -81,7 +87,7 @@ export default function Button({
           justifyContent: "center",
           alignItems: "center",
           borderRadius: 12,
-          opacity: disabled || loading ? 0.5 : 1,
+          opacity: disabled || loading ? 0.7 : 1,
         },
         style,
       ])}
