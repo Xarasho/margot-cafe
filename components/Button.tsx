@@ -6,6 +6,7 @@ import {
   Pressable,
   StyleSheet,
   TextStyle,
+  useColorScheme,
   ViewStyle,
 } from "react-native";
 
@@ -33,6 +34,9 @@ export default function Button({
   style,
   textStyle = {},
 }: ButtonProps) {
+  const theme = useColorScheme();
+  const isDarkMode = theme === "dark";
+
   const sizeStyles: Record<
     ButtonSize,
     { height: number; fontSize: number; paddingHorizontal: number }
